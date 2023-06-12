@@ -25,6 +25,9 @@
               "src/assets"
             ],
             "styles": [
+              "./node-modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "./node-modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node-modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": []
