@@ -1,11 +1,12 @@
 using API.Data;
 using API.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-
+    [Authorize] // cannot useAnonymous at the highest level and then specify authorization lower down
     public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
