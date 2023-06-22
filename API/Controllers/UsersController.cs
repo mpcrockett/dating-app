@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [Authorize] // cannot useAnonymous at the highest level and then specify authorization lower down
+   // cannot useAnonymous at the highest level and then specify authorization lower down
     public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
@@ -22,6 +22,7 @@ namespace API.Controllers
             return users;
         }
 
+        [Authorize]
         [HttpGet("{id}")]
 
         public async Task<ActionResult<AppUser>> GetUser(int id)
