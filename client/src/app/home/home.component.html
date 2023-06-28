@@ -1,17 +1,18 @@
-<div class="container m-5">
-    <div *ngIf="!registerMode" style="text-align: center;">
-        <h1>Find Your Match!</h1>
-        <p class="lead">Register now to view your matches!</p>
-        <div class="text-center">
-            <button (click)="registerToggle()" class="btn btn-primary btn-md me-2">Sign Up</button>
-            <button class="btn btn-info btn-md">About</button>
-        </div>
-    </div>
-    <div *ngIf="registerMode" class="container">
-        <div class="row justify-content-center">
-            <div class="col-4">
-                <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+<div class="bgImage">
+    <div class="">
+        <div *ngIf="!registerMode" style="text-align: center;">
+            <h1 class="text-light">Find Your Match!</h1>
+            <p class="text-light"> Say goodbye to endless swiping and shallow conversations. Flirtify is the dating app designed to bring together like-minded individuals seeking genuine relationships.</p>
+            <div class="text-center">
+                <button (click)="registerToggle()" class="btn btn-light btn-md me-2">Sign Up Now</button>
             </div>
         </div>
-    </div>
+        <div *ngIf="registerMode">
+            <div class="">
+                <div class="col-4">
+                    <app-register (cancelRegister)="cancelRegisterMode($event)"></app-register>
+                </div>
+            </div>
+        </div>
+    </div>  
 </div> 
